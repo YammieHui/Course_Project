@@ -1,0 +1,243 @@
+/* common style */
+
+body {
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica, Arial;
+}
+
+div {
+        margin: 20px 10px;
+        padding: 10px;
+        overflow: auto;
+}
+
+div div {
+        margin: 0 5px;
+        border-radius: 5px;
+}
+
+fieldset, div div {
+        background: #F8FAFC;
+}
+
+.list {
+        display: flex;
+        flex-wrap: wrap;
+}
+
+.list div {
+        transition: transform .2s;  /* animation */
+        background: white;
+        border: 1.5px solid #DFE7EC;
+        flex-basis: 25%;
+        margin-top: 10px;
+}
+            
+.list div:hover {
+        background: white;
+        -ms-transform: scale(1.05); /* IE 9 */
+        -webkit-transform: scale(1.05); /* Safari 3-8 */
+        transform: scale(1.05);
+        box-shadow: 0 2px 7px #B7BDC2;
+}
+
+div h1, h2, h3, h4, p {
+        text-align: center;
+        color: #05172e;
+}
+
+div h1 {
+        font-size: 30px;
+}
+
+select {
+        outline: none;
+        padding: 3px;
+        border-radius: 5px;
+}
+
+.important {
+        background-color: #A4B5C3;
+}
+
+.important * {
+        color: white;
+}
+
+/* hr style */
+
+.short {
+        border: 0;
+        border-bottom: 2px dotted #ccc;
+        width: 25%;
+        margin: 30px auto;
+}
+
+.long {
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+        margin: 60px;
+}
+
+/* container for movie column */
+div dl, #formContainer {
+        display: flex;
+}
+
+div dl div, #formContainer form {
+        flex-grow: 1;
+        flex-basis: 0;
+}
+
+/* input element */
+
+select {
+        text-align: center;
+        text-align-last: center;
+}
+
+input[type="submit"] {
+        border: none;
+        background: #246494;
+        padding: 8px;
+        color: white;
+        font-weight: bold;
+}
+
+input[type="submit"]:hover {
+        background: #103D5F;
+        cursor: pointer;
+}
+
+input[type="submit"]:focus {
+        outline: none;
+}
+
+input[type="text"], input[type="text"]:disabled {
+        background-color: transparent;
+        border: none;
+        text-align: center;
+        width: 100%;
+        min-width: 250px;
+}
+
+/* header & footer group */
+            
+header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        font-family: Georgia, Garamond;
+        box-shadow: 0 0 10px grey;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+}
+
+header, footer {
+        color: white;
+        background: #51B3EC;
+}
+
+header img {
+        animation-name: load;
+        animation-duration: 3s;
+        position: relative;
+        z-index: 1;
+        width: 100px;
+}
+            
+@keyframes load {
+        from {left: 0; transform: rotate(0deg);}
+        to {left: calc(50% - 50px); transform: rotate(360deg);}
+}
+          
+footer {
+        width: 85%;
+        height: auto;
+        font-size: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        float: right;
+}
+
+footer a {
+        text-decoration: none;
+        color: #353b48;
+}
+
+footer a:hover {
+        color: white;
+}
+            
+/* nav group */
+
+nav {
+        position: fixed;
+        top: 100px;
+        width: 15%;
+        height: 100%;
+        background: #353b48;
+        box-shadow: 0 0 5px grey;
+        z-index: 1;
+        overflow: auto;
+}
+
+section section {
+        float: right;
+        width: 85%;
+        min-width: 10%;
+        height: 100%;
+        overflow-x: auto; 
+        overflow-y: scroll;
+}
+
+section section::-webkit-scrollbar {
+        display: none;
+}
+
+section section {
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+}
+
+html, body, .container {
+        height:100%;
+}
+
+
+.container {
+        position: relative;
+        overflow-y: hidden;
+}
+            
+nav ul {
+        list-style-type: none;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+}
+            
+nav li {
+        float: left;
+        display: block;
+        width: 100%;
+}
+            
+nav a {
+        display: block;
+        text-decoration: none;
+        padding: 12px;
+}
+
+nav a {
+        color: white;
+}
+
+nav li:hover {
+        background: #1F232C;
+}

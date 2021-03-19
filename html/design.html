@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Design | City Cinema</title>
+        <style>
+            
+            body {
+                font-family: Helvetica, Arial;
+                background: #353b48;
+                color: #dcdde1;
+            }
+            
+            a {
+                text-decoration: none;
+                color: #FF8EA6;
+            }
+            
+            a:hover {
+                color: white;
+            }
+            
+            a[href="#cw1"] {
+                margin-left: 10px;
+            }
+            
+            #back {
+                text-decoration: none;
+                background-color: #2f3640;
+                margin-left: -10px;
+                padding: 10px;
+                border: 2px solid;
+                color: white;
+                font-size: 15px;
+                border-radius: 10px;
+            }
+            
+            #back:hover {
+                background-color: white;
+                color: #103D5F;
+                border: 2px solid;
+                border-color: #103D5F;
+            }
+            
+            div, #ack p {
+                background-color: #2f3640;
+                padding: 50px;
+                margin: 20px;
+                margin-bottom: 15px;  
+                box-shadow: 0 2px 15px #1C2128;
+            }
+            
+            h1 ~ div, #ack p {
+                border-radius: 5px;
+                box-shadow: 0 0 5px #B7BDC2;
+            }
+            
+            h1 {
+                text-align: center;
+            }
+            
+            h2 {
+                color: #858A92;
+                text-align: center;
+            }
+            
+            h3 {
+                margin-bottom: -7px;
+                color: #178BDE;
+                margin-top: 50px;
+            }
+            
+            img {
+                max-width: 500px;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            
+            .head {
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #9BD4FF;
+            }
+            
+            .p {
+                list-style-type: none;
+                margin-bottom: 20px;
+            }
+            
+            #top {
+                position: fixed;
+                background: white;
+                width: 50px;
+                bottom: 30px;
+                right: 30px;
+                border-radius: 25px;
+                color: #353b48;
+                font-weight: bold;
+                font-size: 25px;
+                text-align: center;
+                padding: 10px 0;
+                cursor: pointer;
+                box-shadow: 0 2px 15px #1C2128;
+            }
+            
+            #top:hover span {
+                display: none;
+            }
+            
+            #top:hover:before {
+                content:"Top";
+                font-size: 15px;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        <div>
+            <a href="index.html" id="back"> &lt;&lt; Back to HOME</a>
+            <a href="#cw1">CW1</a> |
+            <a href="#cw2">CW2</a> |
+            <a href="#cw3">CW3</a> |
+            <a href="#ack">Acknowledgement</a>
+        </div>
+        
+        <a href="#" id="top"><span>▲</span></a>
+        
+        <div id="cw1">
+            <h1>CW1</h1>
+            <div>
+                <h2>Header and Footer</h2>
+                <h3>Item (a): Header, Logo and Company Name</h3>
+                <p>Header tag is used to group the logo and the company name, while the logo is inserted by an image tag.</p>
+                <h3>Item (b): Navigation bar</h3>
+                <p>An unordered list is created for later styling of the navigation bar and links are inserted by anchor tags for navigation purpose.</p>
+                <h3>Item (c): Footer</h3>
+                <p>Footer tag is used to include the copy right information and the links to Home and Design pages.</p>
+            </div>
+            
+            <div>
+                <h2>Home (Index) Page</h2>
+                <h3>Item (d): Single movie information and its trailer</h3>
+                <p>The block is separated into two parts, first by a division element with movie information, and second by a video element provided with two video formats and controls attribute to allow control of video's play.</p>
+                <h3>Item (e): List of all movies</h3>
+                <p>Table elements and unordered list elements are used for better layouting while images are inserted by image tags.</p>
+            </div>
+            
+            <div>
+                <h2>Now Showing Page</h2>
+                <h3>Item (f): Select a cinema</h3>
+                <p>A dropdown list is created by select and option tags for user to select a cinema for buying ticket, also will be used for directing to the specified form in later CW.</p>
+                <h3>Item (g): List of all movies on show now and Submit button</h3>
+                <p>Separated forms represented one cinema each which include thumbnail of the movie (by image tag), dropdown lists showing movie session detail (by select and option tags) and submit button that will direct user to the ticket page (by action attribute in form tag).</p>
+                <h3>Item (h): Cinema location</h3>
+                <p>Map images are inserted by image tags.</p>
+            </div>
+            
+            <div>
+                <h2>Ticket Page</h2>
+                <h3>Item (j): Movie information headings</h3>
+                <p>Multiple h4 elements included in a form which are for pre-setting.</p>
+                <h3>Item (k): Seat plan of house</h3>
+                <p>In order to create a seat plan, a table is formed and buttons are inserted for representing each seat and submitting value in later CW.</p>
+                <h3>Item (l): Confirm button</h3>
+                <p>A sumbit button is created that will send out values and direct user to the print page by action attribute in form tag.</p>
+            </div>
+            
+            <div>
+                <h2>Print Page</h2>
+                <h3>Item (m): Ticket information</h3>
+                <p>Sub-divisions and headings are included to separate inforamtion of different tickets.</p>
+            </div>
+        </div>
+        
+        <div id="cw2">
+            <h1>CW2</h1>
+            <div>
+                <h2>Overall theme layout</h2>
+                <img src="../image/layout.jpg" alt="overall layout">
+            </div>
+            <div>
+                <h2>Number of style sheets & groups of style</h2>
+                <p>Total 2 style sheets and 4 groups of style are used.</p>
+                <h3>Style sheet</h3>
+                <ul>
+                    <li class="head">Overall layout and theme (common.css):</li>
+                    <li class="p">This style sheet is for sharing of common layout and theme between html pages.
+                        For example, header, footer and navigation are the shared elements with a fixed style and layout in all of my web page designs.
+                        Other features like buttons and movie/session information blocks also exist a common design. For the purpose of convenient
+                        maintenance, it is created as a separated style sheet and linked to every html pages.</li>
+                    <li class="head">For printing purpose in Print Page (print.css):</li>
+                    <li class="p">To enable a different layout style during print preview and printed document, a style sheet with media attritube and print value is linked to the Print Page.</li>
+                </ul>
+                <h3>Groups of style (Embedded style)</h3>
+                <p>All embedded style groups are for page specific designing purpose. For example respective unclickable link in navigation bar.</p>
+                <ul>
+                    <li class="head">Home Page (index.html): </li>
+                    <li class="p">For page specific design such as special alignment of movie lists (requirement no. 9), mouse-over effect on thumbnail (requirement no. 10), bold text (requirement no. 11) and video size etc.</li>
+                    <li class="head">Now Showing Page (showing.html): </li>
+                    <li class="p">For page specific design such as special alignment of Buy Ticket information (requirement no. 12), resetting margin for Cinema Select block etc.</li>
+                    <li class="head">Ticket Page (ticket.html): </li>
+                    <li class="p">For page specific design such as alignment of form's fieldsets, seat plan styling (requirement no. 13) and special hover effect (requirement no. 14) for seat selection etc.</li>
+                    <li class="head">Print Page (print.html): </li>
+                    <li class="p">For page specific design of ticket information's alignment.</li>  
+                </ul>
+            </div>
+            <div>
+                <h2>CSS3 features</h2>
+                <ol>
+                    <li><span class="head">Round border corner (border radius): </span><p>Used in style sheet common.css, line 17 and 51.</p></li>
+                    <li><span class="head">Box shadow: </span><p>Used in style sheet common.css, line 35, 122 and 173.</p></li>
+                </ol>
+            </div>
+        </div>
+        
+        <div id="cw3">
+            <h1>CW3</h1>
+            <div>
+                <h2>Types of event handlers used</h2>
+                <h3>Setup in HTML</h3>
+                <ul>
+                    <li class="head">Home Page (index.html): </li>
+                    <li class="p">line 149 in body tag - Function calls of movieList() and firstPlay() when the page is loaded.</li>
+                    <li class="p">line 162 in video tag - Function call of setTimeout(autoVideo, 2000) once the video has ended.</li>
+                    <li class="head">Now Showing Page (showing.html): </li>
+                    <li class="p">line 123 in input tags - Function calls of enableData() when the submit button is clicked.</li>
+                    <li class="p">line 147 in body tag - Function call of selectedList(-1) when the page is loaded.</li>
+                    <li class="p">line 162 in select tag - Function call of selectedList(this.value) when the value of the select tag is changed.</li>
+                    <li class="head">Ticket Page (ticket.html): </li>
+                    <li class="p">line 222 in body tag - Function call of fillVar() and init() when the page is loaded.</li>
+                    <li class="p">line 277 in input tag - Function call of enableData() when the submit button is clicked.</li>
+                    <li class="head">Print Page (print.html): </li>
+                    <li class="p">line 116 in body tag - Function call of countTicket() when the page is loaded.</li>
+                </ul>
+                <h3>Setup in Javascript</h3>
+                <ul>
+                    <li class="head">Home Page (index.html): </li>
+                    <li class="p">line 123 in autoVideo() function - For recalling setTimeout(autoVideo, 2000) once the last video has ended.</li>
+                    <li class="head">Ticket Page (ticket.html): </li>
+                    <li class="p">line 166 in init() function - For calling booked() function when the submit button is clicked.</li>
+                    <li class="p">line 178 in booked() function - For removing the event handler when the seat is clicked.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="ack">
+            <h1>Acknowledgement</h1>
+            <p>Header: Logo (filmreel.png) - <a href="https://pngtree.com/freepng/vector-video-camera-icon_4143915.html">https://pngtree.com/freepng/vector-video-camera-icon_4143915.html</a>
+                <br><br>Now Showing Page: Location map - Google Map
+            </p>
+
+        </div>
+    </body>
+</html>

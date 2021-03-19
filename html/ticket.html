@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ticket | City Cinema</title>
+
+    <link
+      rel="stylesheet"
+      href="../css/common.css"
+      type="text/css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      href="../css/ticket.css"
+      type="text/css"
+      media="all"
+    />
+
+    <!--<script type="text/javascript" src="http://courses.cs.cityu.edu.hk/cs2204/cw3/cinemas.js"></script>-->
+    <script type="text/javascript" src="../script/cinemas.js"></script>
+    <script type="text/javascript" src="../script/ticket.js"></script>
+  </head>
+  <body onload="fillVar(); init();">
+    <header>
+      <h1>CITY</h1>
+      <img src="../image/filmreel.png" alt="logo" />
+      <h1>CINEMA</h1>
+    </header>
+    <section class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="showing.html">NOW SHOWING</a></li>
+        </ul>
+      </nav>
+
+      <section>
+        <form action="print.html" method="get">
+          <fieldset>
+            <legend>Movie Session Detail</legend>
+            <div>
+              <h4>Cinema:</h4>
+              <input name="cinema" type="text" disabled />
+            </div>
+            <div>
+              <h4>Movie:</h4>
+              <input name="movieName" type="text" disabled />
+            </div>
+            <div>
+              <h4>Show Date and Time:</h4>
+              <input name="datetime" type="text" disabled />
+            </div>
+            <div>
+              <h4>House No.:</h4>
+              <input name="house" type="text" disabled />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Seat Selection</legend>
+            <table>
+              <tr>
+                <th></th>
+                <th colspan="4">SCREEN</th>
+              </tr>
+              <tr>
+                <td>A</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>B</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>C</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+              </tr>
+            </table>
+          </fieldset>
+
+          <fieldset class="important">
+            <legend>Seat Booked</legend>
+            <span id="bookedSeat"></span>
+            <input type="submit" value="Confirm" onclick="enableData();" />
+          </fieldset>
+        </form>
+      </section>
+    </section>
+
+    <footer>
+      <span
+        >@Copyright of resources belong to corresponding copyright owners - fair
+        use for education purpose | </span
+      ><a href="index.html">Home</a><span>
+    </footer>
+  </body>
+</html>

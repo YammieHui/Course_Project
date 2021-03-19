@@ -1,0 +1,59 @@
+/* Current page in nav bar not clickable*/
+nav a[href="index.html"]:active {
+  pointer-events: none;
+  cursor: default;
+}
+
+nav a[href="index.html"]:hover {
+  cursor: default;
+}
+
+/* video group */
+
+video {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+video:focus {
+  outline: none;
+}
+
+/* now showing/upcoming */
+
+dt {
+  font-size: 20px;
+  margin-bottom: 7px;
+  border-radius: 5px;
+  padding: 3px;
+  text-align: center;
+  color: black;
+  background: #dfe7ec;
+}
+
+dl span {
+  font-weight: bold;
+}
+
+dd img:hover {
+  cursor: pointer;
+}
+
+.thumbnail {
+  display: inline-block;
+  min-width: 100px;
+  float: left;
+}
+
+dd {
+  display: inline;
+  color: black;
+  margin: 0;
+}
+
+dd:after {
+  display: block;
+  content: "";
+}

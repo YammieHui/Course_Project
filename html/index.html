@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Home | City Cinema</title>
+
+    <link
+      rel="stylesheet"
+      href="../css/common.css"
+      type="text/css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      href="../css/index.css"
+      type="text/css"
+      media="all"
+    />
+
+    <script type="text/javascript" src="../script/movies.js"></script>
+    <script type="text/javascript" src="../script/index.js"></script>
+  </head>
+  <body onload="movieList(); firstPlay();">
+    <header>
+      <h1>CITY</h1>
+      <img src="../image/filmreel.png" alt="logo" />
+      <h1>CINEMA</h1>
+    </header>
+    <section class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="showing.html">NOW SHOWING</a></li>
+        </ul>
+      </nav>
+
+      <section>
+        <div id="video">
+          <video
+            onended="setTimeout(autoVideo, 2000);"
+            controls
+            autoplay
+            muted
+          ></video>
+        </div>
+
+        <hr class="long" />
+
+        <div>
+          <h2>Now Showing</h2>
+          <dl id="nowVideoDiv" class="list"></dl>
+        </div>
+
+        <hr class="long" />
+
+        <div>
+          <h2>Up Coming</h2>
+          <dl id="upcomingVideoDiv" class="list"></dl>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <span
+        >@Copyright of resources belong to corresponding copyright owners - fair
+        use for education purpose | </span
+      ><a href="index.html">Home</a><span>
+    </footer>
+  </body>
+</html>

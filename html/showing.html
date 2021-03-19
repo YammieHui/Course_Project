@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Now Showing | City Cinema</title>
+
+    <link
+      rel="stylesheet"
+      href="../css/common.css"
+      type="text/css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      href="../css/showing.css"
+      type="text/css"
+      media="all"
+    />
+
+    <!--<script type="text/javascript" src="http://courses.cs.cityu.edu.hk/cs2204/cw3/cinemas.js"></script>-->
+    <script type="text/javascript" src="../script/movies.js"></script>
+    <script type="text/javascript" src="../script/cinemas.js"></script>
+    <script type="text/javascript" src="../script/showing.js"></script>
+  </head>
+
+  <body onload="selectedList(-1);">
+    <header>
+      <h1>CITY</h1>
+      <img src="../image/filmreel.png" alt="logo" />
+      <h1>CINEMA</h1>
+    </header>
+    <section class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="showing.html">NOW SHOWING</a></li>
+        </ul>
+      </nav>
+
+      <section>
+        <div class="select important">
+          <h1>Movies now showing at...</h1>
+          <label for="select">Select Cinema: </label>
+          <select id="select" onchange="selectedList(this.value);"></select>
+        </div>
+
+        <div>
+          <h2 id="formHeader"></h2>
+          <div id="formContainer" class="list"></div>
+        </div>
+
+        <hr class="long" />
+
+        <div class="location">
+          <h1>Cinema Locations</h1>
+          <div>
+            <h2>City Cinema - Festival Walk</h2>
+            <p>
+              Address: Level UG, Festival Walk, 80 Tat Chee Avenue, Kowloon
+              Tong, Kowloon
+            </p>
+            <img
+              src="../image/festival_walk.png"
+              alt="City Cinema - Festival Walk (Map)"
+            />
+          </div>
+          <hr class="short" />
+          <div>
+            <h2>City Cinema - Langham Place</h2>
+            <p>
+              Address: Level 8-11, Langham Place Mall, 8 Argyle Street, Mong
+              Kok, Kowloon
+            </p>
+            <img
+              src="../image/langham.png"
+              alt="City Cinema - Langham Place (Map)"
+            />
+          </div>
+          <hr class="short" />
+          <div>
+            <h2>City Cinema - Chai Wan</h2>
+            <p>Address: G/F - 3/F, 333 Chai Wan Road, Chai Wan, Hong Kong</p>
+            <img
+              src="../image/chai_wan.png"
+              alt="City Cinema - Chai Wan (Map)"
+            />
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <span
+        >@Copyright of resources belong to corresponding copyright owners - fair
+        use for education purpose | </span
+      ><a href="index.html">Home</a><span>
+    </footer>
+  </body>
+</html>

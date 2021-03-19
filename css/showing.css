@@ -1,0 +1,78 @@
+/* Current page in nav bar not clickable*/
+a[href="showing.html"]:active {
+  pointer-events: none;
+  cursor: default;
+}
+
+a[href="showing.html"]:hover {
+  cursor: default;
+}
+
+/* Select cinema group */
+.select {
+  margin: 0;
+  padding: 30px;
+}
+
+.select h1 {
+  font-size: 30px;
+}
+
+.select select,
+.select option {
+  color: black;
+}
+
+.select * {
+  text-align: center;
+  display: block;
+  margin: 5px auto;
+}
+
+.select select {
+  border: none;
+}
+
+/* Form/session group */
+form select {
+  border-color: #a4b5c3;
+  width: 100%;
+}
+
+form h2 {
+  margin-top: 50px;
+}
+
+form div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: 0 2%;
+  min-height: 220px;
+}
+
+form * {
+  margin: 5px;
+}
+
+#formContainer {
+  background: white;
+}
+
+input[type="text"],
+input[type="text"]:disabled {
+  font-size: 20px;
+  color: black;
+}
+
+/* location group */
+.location {
+  margin-top: 10px;
+}
+
+.location img {
+  width: 100%;
+}

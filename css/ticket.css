@@ -1,0 +1,111 @@
+/* Current page in nav bar not clickable*/
+a[href="ticket.html"]:active {
+  pointer-events: none;
+  cursor: default;
+}
+
+a[href="ticket.html"]:hover {
+  cursor: default;
+}
+
+/* Styling */
+form {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+fieldset div {
+  margin: 0;
+  display: flex;
+}
+
+fieldset {
+  border: none;
+  margin: 10px;
+  padding: 10px;
+}
+
+legend {
+  background: #a4b5c3;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+fieldset:first-child {
+  clear: both;
+  flex-basis: 100%;
+}
+
+fieldset:nth-child(2) {
+  flex-basis: 55%;
+  flex-grow: 2;
+  min-height: 250px;
+}
+
+fieldset:last-child {
+  background: #a4b5c3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 30px;
+  flex-basis: 20%;
+  flex-grow: 1;
+  min-height: 250px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+td ~ td {
+  padding: 15px 20px;
+  border: 2px solid black;
+}
+
+td ~ td:hover {
+  background: #246494;
+  color: white;
+  cursor: pointer;
+}
+
+td:first-child {
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+h4 {
+  margin: 0;
+  text-align: left;
+  display: inline;
+  margin-right: 20px;
+  flex-basis: 20%;
+}
+
+input[type="text"],
+input[type="text"]:disabled {
+  width: 50%;
+  flex-basis: 80%;
+  text-align: left;
+  font-size: 15px;
+}
+
+#bookedSeat {
+  min-height: 120px;
+}
+
+#bookedSeat input {
+  background: transparent;
+  font-weight: bold;
+  border: none;
+  width: 45px;
+  font-size: 20px;
+  text-align: center;
+}
+
+input[type="submit"] {
+  align-self: center;
+  width: 80px;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Print | City Cinema</title>
+        
+        <link rel="stylesheet" href="../css/print.css" type="text/css" media="print">
+        <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen">
+        
+        <style>
+            .ticket {
+                padding: 20px;
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                background: #F8FAFC;
+                border-radius: 5px;
+            }
+            
+            .ticket ~ .ticket {
+                margin-top: 30px;
+            }
+            
+            .item {
+                display: flex;
+            }
+            
+            .item span:first-child {
+                flex-basis: 20%;
+                display: inline-block;
+                font-weight: bold;
+                width: 30%;
+                min-width: 100px;
+                padding: 10px;
+            }
+            
+            .item span:nth-child(2) {
+                padding: 10px;
+                color: grey;
+            }
+            
+            .item input:disabled {
+                flex-basis: 80%;
+                text-align: left;
+            }
+            
+            input[type="text"] {
+                width: 50%;
+                overflow: auto;
+            }
+            
+            h3 {
+                text-align: center;
+                background: #DFE7EC;
+                padding: 10px;
+                margin-top: 0;
+                border-radius: 5px;
+            }
+            
+        </style>
+        
+        <script>
+            // Get the query string
+            function getVar(attr) {
+                let query = window.location.search.substring(1);
+                let vars = query.split("&");
+                
+                if (attr != "seat") {
+                    // Return the value once the name is matched
+                    for (let i = 0; i < vars.length ; i++) {
+                        let pair = vars[i].split("=");
+                        if (pair[0] == attr) {
+                            return pair[1];
+                        }
+                    } 
+                } else {
+                    // If the argument is "seat", push the values to an array in case multiple seats are booked
+                    let seat = [];
+                    let seatCount = 0;
+                    
+                    for (let i = 0; i < vars.length ; i++) {
+                        let pair = vars[i].split("=");
+                        if (pair[0] == attr) {
+                            seat[seatCount] = pair[1];
+                            seatCount++;
+                        }
+                    }
+                    return seat;
+                }
+                return null;
+            }
+            
+            // Count the number of tickets based on the number of occurence of "seat" name
+            function countTicket() {
+                for (let i = 0; i < getVar("seat").length; i++) {
+                    generateTicket(i);
+                }
+            }
+            
+            // Generate a ticket block with its information for each ticket
+            function generateTicket(i) {
+                document.querySelector("section section").innerHTML +=
+                    '<div class="ticket">' +
+                        '<h3>Ticket ' + (i + 1) + '</h3>' +
+                        '<span class="item"><span>Cinema: </span><span name="cinema">' + getVar("cinema").replaceAll("+", " ") + '</span></span>' +
+                        '<span class="item"><span>Movie: </span><span name="movieName">' + getVar("movieName").replaceAll("+", " ") + '</span></span>' +
+                        '<span class="item"><span>Date Time: </span><span name="datetime">' + getVar("datetime").replaceAll("+", " ").replaceAll("%2C", ",").replaceAll("%3A", ":") + '</span></span>' +
+                        '<span class="item"><span>House No.: </span><span name="house">' + getVar("house") + '</span></span>' +
+                        '<span class="item"><span>Seat: </span><span name="seat">' + getVar("seat")[i] + '</span></span>' +
+                    '</div>';
+            }
+            
+        </script>
+        
+    </head>
+    <body onload="countTicket();">
+        <header><h1>CITY </h1><img src="../image/filmreel.png" alt="logo"><h1> CINEMA</h1></header>
+        <section class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="showing.html">NOW SHOWING</a></li>
+                </ul>
+            </nav>
+                    
+            <section></section>
+        </section>
+        
+        <footer><span>@Copyright of resources belong to corresponding copyright owners - fair use for education purpose | </span><a href="index.html">Home</a><span></footer>
+    </body>
+</html>
