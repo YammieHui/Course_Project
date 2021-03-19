@@ -1,5 +1,5 @@
 # Summary
-Responsive cinema website with dummy ticket booking function
+Responsive cinema website with dummy ticket booking function.
 
 Utilizes HTML elements including:
 * Video
