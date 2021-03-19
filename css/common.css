@@ -143,8 +143,8 @@ header, footer {
 }
 
 header img {
-        animation-name: load;
-        animation-duration: 3s;
+        /**animation-name: load;*/
+        /**animation-duration: 3s;*/
         position: relative;
         z-index: 1;
         width: 100px;
